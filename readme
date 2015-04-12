@@ -1,0 +1,53 @@
+A
+
+F74032023@2015cpp:~/lab3$ g++ -o vector vector.cpp
+F74032023@2015cpp:~/lab3$ ./vector
+2032
+
+B
+
+
+
+const int size = 100000
+
+F74032023@2015cpp:~/lab3$ make
+g++ -c sort.cpp
+g++ -o sort sort.o Clock.o
+F74032023@2015cpp:~/lab3$ ./sort
+sort(): 0.04 seconds				-->most is nlog(n)
+v1/v2 are different.			
+insertion_sort(): 128.54 seconds		-->most is n^2
+v1/v2 are the same.
+
+
+
+
+const int size = 10000
+
+
+
+F74032023@2015cpp:~/lab3$ make
+g++ -c sort.cpp
+g++ -o sort sort.o Clock.o
+F74032023@2015cpp:~/lab3$ ./sort
+sort(): 0 seconds				-->time is too small->0
+v1/v2 are different.
+insertion_sort(): 1.28 seconds			-->10^5^2/10^4^2~=128.54/1.28
+v1/v2 are the same.
+
+const int size = 1000
+
+
+F74032023@2015cpp:~/lab3$ make
+g++ -c sort.cpp
+g++ -o sort sort.o Clock.o
+F74032023@2015cpp:~/lab3$ ./sort
+sort(): 0 seconds				-->time is to small->0
+v1/v2 are different.
+insertion_sort(): 0.01 seconds			-->10^4^2/10^3^2~=1.28/0.01
+v1/v2 are the same.
+
+
+when n is bigger the time difference is bigger
+because nlog(n) & n^2 difference is bigger
+
